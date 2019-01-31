@@ -16,17 +16,32 @@
             <li><a href="4.html">Node.js</a></li>
         </ol>
         <div> 
-            <input type="text">
+                <input id="day_night" type="button" value="night" onclick="
+                var body = document.querySelector('body');
+                // 만약에 이 버튼의 value 값이 night라면
+                if(this.value === 'night') {
+                    body.style.backgroundColor = 'black';
+                    body.style.color = 'white';
+                    //이 버튼의 value 값을 day로 바꿔!
+                    this.value = 'day';
+                } else { // night가 아니라면
+                    body.style.backgroundColor = 'white';
+                    body.style.color = 'black';
+                    //이 버튼의 value 값을 night로 바꿔!
+                    this.value = 'night';
+                }
+            ">
             <input type="button" value="day" onclick="
-                var body = document.querySelector('body')
-                body.style.backgroundColor='yellow';
-                body.style.color='black';
+                var body = document.querySelector('body');
+                body.style.backgroundColor = '#001100';
+                body.style.color = 'black';
             ">
             <input type="button" value="night" onclick="
                 var body = document.querySelector('body');
                 body.style.backgroundColor = 'black';
-                body.style.color='white';
+                body.style.color = 'white';
             ">
+
             <h2>JavaScript</h2>
             JavaScript Lorem ipsum dolor sit amet.
         </div>
